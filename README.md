@@ -3,6 +3,7 @@ In this assignment, you'll create the necessary files to perform the analysis de
 
 **Important**: Be sure to publish your site prior to the assignment due date, to test that your webserver is working correctly.
 
+
 ###  Notes
 #### File organization
 * The `analysis.R` file and, if needed, other data analysis or visualization files should be placed in your `/source` directory.
