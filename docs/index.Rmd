@@ -1,0 +1,31 @@
+# Assignment 3 : Data Visualization (incarceration)
+```{r setup, include=FALSE}
+library("ggplot2")
+library("dplyr")
+knitr::opts_chunk$set(echo = TRUE)
+```
+### 1. Introduction
+
+
+### 2. Summary Information
+```{r summary source, echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/Summary_Information.R")
+```
+
+### 3. Trends over time chart
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/Trends_over_time_chart.R")
+
+```
+
+### 4. Variable comparison chart
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/Variable_comparison_chart.R")
+```
+
+### 5. Map
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+source("../source/Map.R")
+map
+```
