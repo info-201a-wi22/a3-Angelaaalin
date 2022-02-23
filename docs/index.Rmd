@@ -5,6 +5,7 @@ library("dplyr")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ### 1. Introduction
+In this data visualization, I want to look at the differences in incarceration number by state, race, gender, and age. I choose to analyze the population in jail of different states and races. Also, I want to compare the difference in population in jail between males and females, teenagers and adults.
 
 
 ### 2. Summary Information
