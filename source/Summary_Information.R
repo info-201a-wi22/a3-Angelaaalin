@@ -47,16 +47,14 @@ female <- incarceration_trends %>%
   pull(female_in_jail)
 gender_ratio <- round(female/male, 3)
 
-# state with the highest average ratio of total_jail_pop to total_pop # 
-incarceration_trends$ratio <- paste0(incarceration_trends$total_jail_pop/incarceration_trends$total_pop)
-highest_ratio <- incarceration_trends %>%
+# state with the highest average ratio of total_jail_pop to total_pop in the most recent year # 
+incarceration_trends["ratio"] = incarceration_trends$total_jail_pop/incarceration_trends$total_pop
+recent_highest_ratio_ <- incarceration_trends %>%
   group_by(state) %>%
+  filter(year == max(year)) %>%
   summarise(ave_ratio = mean(ratio, na.rm = TRUE)) %>%
   filter(ave_ratio == max(ave_ratio, na.rm = TRUE)) %>%
   pull(state)
-  
-    
-
 
 # ratio of juvenile in jail to adult in jail #
 
