@@ -11,18 +11,20 @@ In this data visualization, I want to look at the differences in incarceration n
 ### 2. Summary Information
 ```{r summary source, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/Summary_Information.R")
+summary_info
 ```
 
 ### 3. Trends over time chart
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/Trends_over_time_chart.R")
-
+race_pop_over_time()
 ```
 
 ### 4. Variable comparison chart
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/Variable_comparison_chart.R")
+gender_pop_over_time()
 ```
 
 ### 5. Map

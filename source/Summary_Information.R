@@ -4,7 +4,7 @@ library("tidyverse")
 library("dplyr")
 # Read data #
 incarceration_trends <- read.csv(file = "../data/incarceration_trends.csv", header = TRUE, stringsAsFactors = FALSE)
- View(incarceration_trends)
+
 # state with  the highest total jail population #
 highest_jail_pop_state <- incarceration_trends %>%
   group_by(state) %>%
@@ -12,7 +12,7 @@ highest_jail_pop_state <- incarceration_trends %>%
   filter(total_popu == max(total_popu)) %>%
   pull(state)
 
-# race with highest total jail population %
+# race with highest total jail population #
 aapi <- sum(incarceration_trends$aapi_jail_pop, na.rm = TRUE)
 black <- sum(incarceration_trends$black_jail_pop, na.rm = TRUE)
 latinx <- sum(incarceration_trends$latinx_jail_pop, na.rm = TRUE)
@@ -26,7 +26,7 @@ highest_jail_pop <- data %>%
   filter(population == max(population)) %>%
   pull(race)
 
-# state with the current highest total jail population#
+# state with the current highest total jail population #
 state_highest_jail_recent <- incarceration_trends %>%
   filter(year == max(year)) %>%
   filter(total_jail_pop == max(total_jail_pop, na.rm = TRUE)) %>%
@@ -65,7 +65,13 @@ adult <- sum(incarceration_trends$female_adult_jail_pop, na.rm = TRUE) +
   sum(incarceration_trends$male_adult_jail_pop, na.rm = TRUE)
 ratio_age <- round(juvenile/adult, 3)
   
- 
+
+summary_info <- list("race with highest total jail population" = highest_jail_pop,
+                     " state with  the highest total jail population" = highest_jail_pop_state,
+                     "state with the current highest total jail population" = state_highest_jail_recent,
+                     "ratio of female in jail to male in jail in the most recent year" = gender_ratio,
+                     "state with the highest average ratio of total_jail_pop to total_pop in the most recent year" = recent_highest_ratio_,
+                     "ratio of juvenile in jail to adult in jail" = ratio_age)
   
   
    
