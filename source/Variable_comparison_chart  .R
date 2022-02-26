@@ -26,10 +26,10 @@ ggplot(df, aes(x = year, y = population)) +
   labs(title = "Female v.s Male population in jail") +
   scale_color_manual(values = cols) +
   legend(x= 1970, y = 65000,
-         legend = c("Female", "Male"),
-         fill  = c(cols),
+         legend=c("Female", "Male"),
+         fill  = c(cols)
   )
 }
-            
+         
               
   

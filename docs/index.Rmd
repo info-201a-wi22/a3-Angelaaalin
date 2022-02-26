@@ -1,4 +1,9 @@
-# Assignment 3 : Data Visualization (incarceration)
+---
+title: "Assignment 3 : Data Visualization (incarceration)"
+author: "Angela Lin"
+date: "2/22/2022"
+output: html_document
+---
 
 ```{r setup, include=FALSE}
 library("ggplot2")
@@ -23,6 +28,7 @@ This chart helps to demonstrate how the population in jail of different races de
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/Trends_over_time_chart.R")
+
 race_pop_over_time()
 ```
 

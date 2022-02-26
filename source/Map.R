@@ -8,7 +8,7 @@ library("gridExtra")
 incarceration_trends <- read.csv(file = "../data/incarceration_trends.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # Total population in jail distributed in WA #
-wa <- incarceration_trends %>%
+map <- function() {wa <- incarceration_trends %>%
   filter(state == "WA") %>%
   group_by(county_name) %>%
   summarise(total_jail_pop = sum(total_jail_pop, na.rm = TRUE))
@@ -32,17 +32,13 @@ location_wa <- data.frame(
                -121.7179007, -117.367709, -117.8344205, -122.8179101, -123.4345775,
                -118.484424, -121.7845869, -117.4843562, -120.6678459))
 
-leaflet(data = location_wa) %>% 
-  addProviderTiles("Total population in jail distributed in WA") %>%
-  setView(lng = -77.0368, lat = 38.90719, zoom = 11) %>%
-  addCircles(lat = ~latitude,   
-             lng = ~ longitude, 
-             popup = ~population,    
-             radius = 100,      
-             stroke = FALSE,
-             color = "red")
-    
+leaflet(location_wa) %>%
+  addMarkers(data = location_wa) %>%
+  addTiles("Total population in jail distributed in WA") 
+  addMarkers(lng= -120.740135, lat = 47.751076)
+  
 
+}
 
 
 
