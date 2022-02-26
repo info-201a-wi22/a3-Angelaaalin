@@ -24,7 +24,11 @@ cols <- c("red", "blue")
 ggplot(df, aes(x = year, y = population)) +
   geom_point(aes(x = year, y = population, color = Gender)) +
   labs(title = "Female v.s Male population in jail") +
-  scale_color_manual(values = cols)
+  scale_color_manual(values = cols) +
+  legend(x= 1970, y = 65000,
+         legend = c("Female", "Male"),
+         fill  = c(cols),
+  )
 }
             
               

@@ -29,7 +29,11 @@ ggplot(df, aes(x = year, y = population, color = Race)) +
   geom_point(aes(x = year, y = population, color = Race)) +
   geom_line(mapping = aes(x = year, y = population, color = Race)) +
   labs(title = "Different races of population in jail over time") +
-  scale_color_manual(values = cols)
+  scale_color_manual(values = cols)+ 
+  legend(x= 1975, y = 350000,
+         legend = c("AAPI","Black", "Latinx", "Native", "White", "Other"),
+         fill  = c(cols),
+         )
 }
   
   

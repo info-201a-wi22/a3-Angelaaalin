@@ -1,14 +1,17 @@
 # Assignment 3 : Data Visualization (incarceration)
+
 ```{r setup, include=FALSE}
 library("ggplot2")
 library("dplyr")
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 ### 1. Introduction
+
 In this data visualization, I want to look at the differences in incarceration number by state, race, gender, and age. I choose to analyze the population in jail of different states and races. Also, I want to compare the difference in population in jail between males and females, teenagers and adults.
 
-
 ### 2. Summary Information
+
 ```{r summary source, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/Summary_Information.R")
 summary_info
@@ -16,18 +19,24 @@ summary_info
 
 ### 3. Trends over time chart
 
+This chart helps to demonstrate how the population in jail of different races develop over time. In the trends over time chart, I use points to represent the population in each year and lines in the chart to display the overall trend.
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/Trends_over_time_chart.R")
 race_pop_over_time()
 ```
 
 ### 4. Variable comparison chart
+
+This chart helps to demonstrate how the population in jail differs between the two genders. In the chart, I use points to represent the population in each year and lines to display the comparison of the situation that the female and male populations in jail
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/Variable_comparison_chart.R")
 gender_pop_over_time()
 ```
 
 ### 5. Map
+
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/Map.R")
 map
