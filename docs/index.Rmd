@@ -41,7 +41,7 @@ gender_pop_over_time()
 ```
 
 ### 5. Map
-
+This map shows the population in jail distributed in Washington counties. I use the different sizes of circles to demonstrate the differences in population in counties. 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 source("../source/analysis.R")
 
